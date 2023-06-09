@@ -1,0 +1,163 @@
+
+ .text{
+    font-size: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #AC3483;
+}
+.text2{
+    font-size: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #FFF;
+}
+.text3{
+    font-size: 20px;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+.text4{
+    font-size: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #FFF;
+}
+
+
+.dashboard{
+    filter: saturate(100%)!important;
+}
+.dashboard:hover{
+    filter: saturate(100%);
+    transition:var(--tran-04) ;
+}
+
+ .register{
+    filter: saturate(0%);
+}
+.register:hover{
+    filter: saturate(100%);
+    transition:var(--tran-04) ;
+} 
+
+
+
+
+.stick{
+    background: linear-gradient(178.3deg, #AC3483 -7.3%, #86319E 51.03%, #3129DB 142.49%);
+    margin-right: 1rem;
+    width: .31rem;
+    height: 4rem;
+    margin-left: 12rem;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.text-h2{
+    margin-left: 13.5rem;
+    margin-top: 1rem;
+    font-weight: 200;
+    font-size: 22px;
+    color: #FFF;
+
+}
+.banner{
+    width: 80%;
+    margin-left:30%;
+    margin-top: 4%;
+}
+.banner img{
+    width: 50%;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin-left: 12rem;
+    gap: 6rem;
+
+}
+/* ---------------------CONTEUDO PRINCIPAL-------------------- */
+
+.content-form{
+    margin-left: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:4rem;
+    margin-top: 5rem;
+    color: #FFF;
+}
+
+.initial-content{
+    display: flex;
+    justify-content: space-around;
+}
+.start-content{
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 30%;
+    padding-left: 2rem;
+    height: 200px;
+}
+.flex-itens{
+    display: flex;
+    
+}
+
+.sel-med{
+    background: none;
+    border: none;   
+    width: 1.25rem;
+}
+#myChartContainer {
+    width: 400px;
+    height: 10px;
+    position: relative;
+  }
+
+
+.mid-content{
+    display: flex;
+    justify-content: space-around ;
+}
+.m-content, .mm-content{
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.m-content{
+    width: 65%;
+}
+.mm-content{
+    width: 30%;
+}
+
+
+.end-content{
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: #2A2A2B;
+box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+width: 98%;
+
+
+}
+.e-content{
+
+}

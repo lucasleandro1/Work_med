@@ -1,0 +1,243 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    /* ===== Colors ===== */
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+
+/* ===== Reusable code - Here ===== */
+
+ .text{
+    font-size: 20px!important;
+    font-weight: 400!important;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #FFF!important;
+}
+.text2{
+    font-size: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #FFF;
+}
+.text3{
+    font-size: 22px!important;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #AC3483!important;
+    font-weight: 600!important;
+}
+.text4{
+    font-size: 20px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 1rem;
+    color: #FFF;
+}
+
+
+/* =========================== */
+
+
+
+.list{
+    filter: saturate(100%)!important;
+}
+
+.stick{
+    background: linear-gradient(178.3deg, #AC3483 -7.3%, #86319E 51.03%, #3129DB 142.49%);
+    margin-right: 1rem;
+    width: .31rem;
+    height: 4rem;
+    margin-left: 12rem;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.text-h2{
+    margin-left: 13.5rem;
+    margin-top: 1rem;
+    font-weight: 200;
+    font-size: 22px;
+    color: #FFF;
+
+}.banner{
+    margin-left: 40%;
+    margin-top: 2%;
+}
+.banner img{
+    width: 40.4%;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5%;
+    margin-left: 12rem;
+    gap: 3rem;
+
+}
+/* Card Medic */
+.medic{
+    width: 21%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.tx-standard{ 
+    display: block;
+    margin: 10% 0% 10% 12%;
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    width: 20px;
+}
+.tx-med{
+    color: #16A085;
+}
+.medic img{
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: -1px;
+}
+.medic button{
+    background: linear-gradient(180deg, #16A085 -47.33%, rgba(22, 160, 133, 0.3) 209.33%);
+    border-radius: 0px 0px 18px 22px;
+    width: 100%;
+    padding: 7%;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+/*----------- Card Patient --------------*/
+.patient{
+    width: 21%;
+    height: 50%;
+    flex-direction: column;
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.tx-pat{
+    color: #FF7723;
+}
+.patient img{
+    width: 55%;
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-bottom: -5px;
+}
+.patient button{
+    background: linear-gradient(180deg, #FF7723 -47.33%, rgba(255, 119, 35, 0.3) 209.33%);
+    border-radius: 0px 0px 18px 22px;
+    width: 100%;
+    padding: 7%;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/*----------- Card Surgery --------------*/
+.surgery{
+    width: 21%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.tx-sur{
+    color: #AC3483;
+}
+.surgery img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 7%;
+    margin-bottom: -1px;
+}
+.surgery button{
+    background: linear-gradient(180deg, #AC3483 -47.33%, rgba(172, 52, 131, 0.3) 230%);    border-radius: 0px 0px 18px 22px;
+    width: 100%;
+    padding: 7%;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*----------- Card Room --------------*/
+
+
+.room{
+    width: 21%;
+    height: 50%;
+    flex-direction: column;
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.tx-rom{
+    color: #308ECC;
+}
+.room img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 11%;
+    margin-bottom: -5px;
+}
+.room button{
+    background: linear-gradient(180.74deg, #308ECC -17.57%, rgba(48, 142, 204, 0.22) 224.02%);
+    border-radius: 0px 0px 18px 22px;
+    width: 100%;
+    padding: 7%;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
