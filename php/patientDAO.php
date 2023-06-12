@@ -3,8 +3,15 @@ require_once 'Conexao.php';
 require_once 'patient.php';   
 class PatientDAO {
 
-    public function create (Patient $patient) {
-        $sql = 'INSERT INTO  patient (name, cpf, gender, date, number, adress, date_surgery, room_used, insurance, doctor_name, expenses, type_surgery) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)';
+    public function create(Patient $patient){
+    $birthDate = DateTime::createFromFormat('Y-m-d', $patient->getDate()); // Data de nascimento do paciente
+    $currentDate = new DateTime(); // Data atual
+
+    // Calcula a data mínima permitida (100 anos atrás)
+    $minDate = (new DateTime())->sub(new DateInterval('P100Y'));
+
+    if ($birthDate >= $minDate && $birthDate <= $currentDate) {
+        $sql = 'INSERT INTO patient (name, cpf, gender, date, number, adress, date_surgery, room_used, insurance, doctor_name, expenses, type_surgery) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)';
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $patient->getName());
         $stmt->bindValue(2, $patient->getCpf());
@@ -21,7 +28,10 @@ class PatientDAO {
         $stmt->execute();
         $id = Conexao::getConn()->lastInsertid('patient');
         $patient->setId($id);
+    } else {
+        echo "Data de nascimento inválida. Certifique-se de que a data esteja entre " . $minDate->format('Y-m-d') . " e " . $currentDate->format('Y-m-d');
     }
+}
 
     public function read(){
         $sql = 'SELECT * FROM patient';

@@ -1,144 +1,15 @@
-/* Google Font Import - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-:root{
-    /* ===== Colors ===== */
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
-
-body{
-
-    background-color: var(--body-color);
-
-    background: #202020;
-}
-
-::selection{
-    background-color: var(--primary-color);
-    color: #fff;
-}
- .text{
-    font-size: 20px!important;
-    font-weight: 400!important;
-    white-space: nowrap!important;
-    
-    margin-left: 1rem!important;
-    color: #FFF!important;
-}
-.text2 {
-    font-size: 22px!important;
-    font-weight: 600!important;
-    white-space: nowrap!important;
- 
-    margin-left: 1rem!important;
-    color: #AC3483  !important;
-}
-.text3{
-    font-size: 20px;
-    white-space: nowrap;
-    opacity: 1;
-    margin-left: 1rem;
-    color: #fff;
-    font-weight: 400;
-}
-.text4{
-    font-size: 20px;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 1;
-    margin-left: 1rem;
-    color: #FFF;
-}
-
-
-/* =========================== */
-
 
 
 .register{
     filter: saturate(100%)!important;
 }
-
-
-
-.image{
-    padding-left: 4rem;
-    padding-right: 3rem;
+.list{
+    filter: saturate(0%)!important;
 }
-
-.menu-links{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+.list:hover{
+    filter: saturate(100%)!important;
+    transition:var(--tran-04)!important;
 }
-
-.sidebar li a{
-    list-style: none;
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: var(--tran-03);
-}
-
-.sidebar .menu-bar{
-    height: calc(100% - 55px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
-    
-}
-.menu-bar::-webkit-scrollbar{
-    display: none;
-}
-
-
-
-/* Conteudo que vai dentro do site */
-.home{
-    position: absolute;
-    top: 0;
-    top: 2rem;
-    left: 9rem;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
-    padding: 12px 60px;
-    width: 90%;
-}
-/* quando estiver fechado */
-.sidebar.close ~ .home{
-    top: 2rem; 
-    left: 0rem;
-    width: 100%;
-}
-.text-menu{
-    font-weight: 500;
-    font-size: 42px;
-
-    color: #FFFFFF;
-}
-
 .stick{
     background: linear-gradient(178.3deg, #AC3483 -7.3%, #86319E 51.03%, #3129DB 142.49%);
     margin-right: 1rem;

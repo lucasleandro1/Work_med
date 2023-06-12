@@ -11,7 +11,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Dashboard</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/medic-list.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/surgery-list.css'>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,48 +30,61 @@
 
     <section class="home">
         <div class="title">
+            <div class="back"><a href="./select-list.php"><img src="../Components/SVG/arrow-r.svg" alt=""></a></div>
             <div class="stick"></div>
             <div class="text-menu">Listagem</div>
         </div>
         <div class="text-h2">Cirurgias</div>
-
+        <div class="btn-cad">
+                <a href="./surgery-register.php"><button class="cad-btn">Cadastrar<img src="../Components/SVG/cadastro.svg" alt="Voltar"></button></a>
+        </div>
         <div class="content-form">
 
             <!-- --------------- InputFields --------------- -->
 
-            <?php 
-                    
-            foreach ($surgerys as $surgery) { ?>
-                <form method="get" action="../php/PostSurgery.php" class="form">
+            <?php foreach ($surgerys as $surgery) { ?>
+                <div class="form-flex">
+                    <form method="get" action="../php/PostSurgery.php" class="form">
+                        <details class="list-form">
+                        <summary><img src="../Components/SVG/Rectangle rosa.svg" class="img-ret" alt=""><img src="../Components/SVG/user rosa.svg" class="img-user" alt=""><?= $surgery->getName() ?></summary>                     
+                            <div class="list-flex">
+                                <div class="dados">
+                                    <h1>Informações</h1>
+                                    <div class="info-container">
+                                        <div>   
+                                            <div class="info-flex">
+                                                <span>Nome Do Procedimento</span>
+                                                <p><?= $surgery->getName() ?></p>
+                                            </div>
+                                        </div> 
+                                    </div>                       
+                                </div>
 
-                    <details class="list-form">
-                        <summary><?= $surgery->getName() ?></summary>                       
-                        <div class="list-flex">
-                            <div class="dados">
-                                <h1>Informações</h1>
-                                <p><?= $surgery->getName() ?></p>
-                                                                
+                                <div class="especs">
+                                    <h1>Descrição</h1>
+                                    <div class="info-container">
+                                        <div class="flex-third"> 
+                                            <div class="info-flex">
+                                                <span>Especialidade</span>
+                                                <p><?= $surgery->getDescription() ?></p>    
+                                            </div>
+                                        </div>
+                                    </div>                         
+                                </div>
                             </div>
-                            <div class="especs">
-                                <h1>Descrição</h1>
-                                <p><?= $surgery->getDescription() ?></p>                             
-                            </div>
-                        </div>
-                    </details>
+                        </details>
                     </form>
-                    <div class="btn-action">
-                        <a href="./surgery-update.php?id=<?= $surgery->getId() ?>"><button class="delete-btn">Editar</button></a>
-                        <a href="../php/deleteSurgery.php?id=<?= $surgery->getId() ?>"><button class="delete-btn">Excluir</button></a>
-                    </div>
-                    
-                    
-                
-                
-            <?php
-            
-              } 
-            ?>
-
+                        <div class="btn-action">
+                            <details class="det-btn">
+                                <summary><img src="../Components/SVG/3dot.svg" alt=""></summary>
+                                <summary class="flex-img">
+                                    <a href="./surgery-update.php?id=<?= $surgery->getId() ?>"><img src="../Components/SVG/update r.svg" alt=""     class="btn-u" ></a>
+                                    <a  href="../php/deleteSurgery.php?id=<?= $surgery->getId() ?>"><img src="../Components/SVG/delete r.svg" alt=""class="btn-d"></a>
+                                </summary>
+                            </details>
+                        </div>
+            </div>
+            <?php }?>
         </div>
     </section>
 

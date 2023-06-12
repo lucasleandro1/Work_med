@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
     require_once '../php/roomDao.php';
-    $surgeryDAO = new RoomDAO();
+    require_once '../php/patientDao.php';
+    $surgeryDAO = new PatientDAO();
     $surgeryNames = $surgeryDAO->SurgeryNames();
 ?>
 <html>
@@ -22,13 +23,14 @@
 
     <!-- --------------- Menu Sidebar --------------- -->
     <?php
-        include ('./sidebar.html')
+        include ('./sidebar-room.html')
     ?>
 
      <!-- --------------- Conteudo Principal --------------- -->
 
     <section class="home">
         <div class="title">
+            <div class="back"><a href="./select-register.php"><img src="../Components/SVG/arrow-a.svg" alt=""></a></div>
             <div class="stick"></div>
             <div class="text-menu">Cadastro</div>
         </div>
@@ -44,16 +46,16 @@
 
                             <div class="flex-content">
                                 <label class="tx"  for="name" >Nome da Sala <span>*</span></label>
-                                <input name="name" id="" class="name" placeholder="Ex.: Sala 1 ">
+                                <input name="name" required id="" class="name" placeholder="Ex.: Sala 1 ">
                             </div>
                             <div class="flex-content">
                                 <label class="tx">Localidade da Sala <span>*</span></label>
-                                <input type="text" name="location" id="" placeholder="Ex.: 2° Corredor, 3° Andar" class="locate">
+                                <input type="text" name="location" required id="" placeholder="Ex.: 2° Corredor, 3° Andar" class="locate">
                             </div>
 
                         </div>
 
-                        <div class="surgery-type">
+                       <div class="surgery-type">
                             <label class="tx-proc">Tipo de Cirurgia</label>
                             <div class="check-proc">
                             <?php foreach ($surgeryNames as $name) { ?>

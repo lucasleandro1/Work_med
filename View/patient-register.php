@@ -25,12 +25,13 @@
 
     <!-- --------------- Menu Sidebar --------------- -->
     <?php
-        include ('./sidebar.html')
+        include ('./sidebar-patient.html')
     ?>
      <!-- --------------- Conteudo Principal --------------- -->
 
     <section class="home">
         <div class="title">
+            <div class="back"><a href="./select-register.php"><img src="../Components/SVG/arrow-l.svg" alt=""></a></div>
             <div class="stick"></div>
             <div class="text-menu">Cadastro</div>
         </div>
@@ -84,10 +85,10 @@
                     <div class="form-flex">
                         <div class="flex-content">
                             <label class="label-form"   for="sala">Sala utilizada <span>*</span></label>
-                            <select name="sala" id="sala" class="input-form">
+                            <select name="sala" id="sala" required class="input-form">
                             <option disabled selected value="">Escolha uma opção</option>
                                     <?php foreach ($roomNames as $name) { ?>
-                                        <option value="<?= $name ?>"><?= $name ?></option>
+                                        <option required value="<?= $name ?>"><?= $name ?></option>
                                     <?php } ?>
                                 </select>
                         </div>
@@ -110,7 +111,7 @@
 
                             <div class="flex-content">
                                 <label class="tx" >Médico Responsável</label>
-                                <select name="medico" id="" class="sele-doc">
+                                <select name="medico" required id="" class="sele-doc">
                                 <option disabled selected value="">Escolha uma opção</option>
                                     <?php foreach ($doctorNames as $name) { ?>
                                         <option value="<?= $name ?>"><?= $name ?></option>
@@ -122,7 +123,7 @@
 
                             <div class="flex-content">
                                 <label class="tx" for="gastos">Total Gasto</label>
-                                <input type="text" name="gastos" id="gastos" placeholder="Ex: 258,43" class="gastos">
+                                <input type="text" name="gastos" required id="gastos" placeholder="Ex: 258,43" class="gastos">
                             </div>
 
                         </div>
@@ -132,7 +133,7 @@
                             <div class="check-proc">
                             <?php foreach ($surgeryNames as $name) { ?>
                                     <div class="checkbox">
-                                        <input type="checkbox" value="<?= $name ?>" name="surgery" id="<?= $name ?>">
+                                        <input type="checkbox"value="<?= $name ?>" name="surgery" id="<?= $name ?>">
                                         <label for="<?= $name ?>"><?= $name ?></label>
                                     </div>
                                 <?php } ?>

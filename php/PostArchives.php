@@ -15,6 +15,6 @@ $adr = $_POST['endereco'];
 $doctor = new Doctor($name, $speciality, $gen, $crm, $num, $cpf, $date, $adr);
 $medicDAO->create($doctor);
 
-header('Location: ../view/select-list.php');
+header('Location: ../view/medic-list.php');
 
 ?>

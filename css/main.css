@@ -1,37 +1,13 @@
 
- .text{
-    font-size: 22px;
-    font-weight: 600;
-    white-space: nowrap;
-    opacity: 1;
-    margin-left: 1rem;
-    color: #AC3483;
-}
-.text2{
-    font-size: 20px;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 1;
-    margin-left: 1rem;
-    color: #FFF;
-}
-.text3{
-    font-size: 20px;
-    white-space: nowrap;
-    opacity: 1;
-    margin-left: 1rem;
-    color: #fff;
-    font-weight: 400;
-}
-.text4{
-    font-size: 20px;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 1;
-    margin-left: 1rem;
-    color: #FFF;
-}
 
+
+.list{
+    filter: saturate(0%)!important;
+}
+.list:hover{
+    filter: saturate(100%)!important;
+    transition:var(--tran-04)!important;
+}
 
 .dashboard{
     filter: saturate(100%)!important;
@@ -87,7 +63,7 @@
     gap: 6rem;
 
 }
-/* ---------------------CONTEUDO PRINCIPAL-------------------- */
+/* ---------------------Conteudo Inicial-------------------- */
 
 .content-form{
     margin-left: 12rem;
@@ -102,62 +78,361 @@
 .initial-content{
     display: flex;
     justify-content: space-around;
+    gap: .5rem;
 }
 .start-content{
     background: #2A2A2B;
     box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     width: 30%;
-    padding-left: 2rem;
-    height: 200px;
-}
-.flex-itens{
-    display: flex;
+    padding: 2rem 2rem 0 2rem;
+    overflow: hidden;
     
 }
+/* --------------------- Cirurgia Por Medico -------------------- */
 
-.sel-med{
-    background: none;
-    border: none;   
-    width: 1.25rem;
+.title-m{
+    display: flex;
+    justify-content: space-between;   
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 37px;
+    color: #FF7723;
 }
-#myChartContainer {
-    width: 400px;
-    height: 10px;
-    position: relative;
+
+.sel-med {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    background-image: url('../Components/SVG/filter.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 70% 70%;
+    outline: none;
+    padding-right: 2rem;
+    border: none;
+    width: .2rem;
+    cursor: pointer;
+    
+  } 
+option{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-weight: 500;
+}
+  
+select::-ms-expand {
+    display: none;
   }
 
+
+.content-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.name-m{
+    padding-top: 2rem;
+    width: 80%;
+}
+.name-m span{
+    font-weight: 500;
+    font-size: 28px;
+}
+.name-m p{
+    padding-top: .8rem;
+    font-weight: 200;
+    font-size: 20px;
+}
+.total-m{
+    background: url(../Components/SVG/Ellipse\ laranja.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 150px;
+    margin: 2rem 0% 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total-m p{
+    font-size: 40px;
+}
+/* --------------------- Cirurgia Por Convênio -------------------- */
+
+.title-c{
+    display: flex;
+    justify-content: space-between;   
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 37px;
+    color: #308ECC;
+}
+.sel-con {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    background-image: url(../Components/SVG/filter\ azul.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 70% 70%;
+    outline: none;
+    padding-right: 2rem;
+    border: none;
+    width: .2rem;
+    cursor: pointer;
+    
+  } 
+
+.name-c{
+    padding-top: 2rem;
+    width: 80%;
+}
+.name-c span{
+    font-weight: 500;
+    font-size: 28px;
+}
+.name-c p{
+    padding-top: .8rem;
+    font-weight: 200;
+    font-size: 20px;
+}
+.total-c{
+    background: url(../Components/SVG/Ellipse\ azul.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    height: 150px;
+    margin: 2rem 0% 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total-c p{
+    font-size: 40px;
+}
+
+/* -------------------------- Cirurgi Por Dia ------------------------------- */
+
+.title-i{
+    display: flex;
+    justify-content: space-between;   
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 37px;
+    color: #27AE60;
+    width: 70%;
+}
+.title-flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.total-i {
+    background: url(../Components/SVG/Ellipse\ verde.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 23%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total-i p{
+    font-size: 30px;
+}
+.clima{
+    display: flex;
+}
+.clima h4{
+    color: #27AE60;
+}
+.sur-dia p{
+   color: #27AE60;
+   font-size: 34px;
+}
+.sur-dia p span{
+    color: #fff;
+    font-weight: 600;
+    font-size: 28px;
+}
+.sur-dia span{
+    font-size: 20px;
+    font-weight: 200;
+}
+.content-i{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    color: 
+    #e74c3c
+    #FF7723
+    #308ECC
+    
+    #AC3483
+    #1ABC9C
+    #2C2C54
+    #D4D4D4;
+}
+
+/* -------------------------- Grafico cirurgia/mes --------------------------- */
 
 .mid-content{
     display: flex;
     justify-content: space-around ;
+    
+    
 }
-.m-content, .mm-content{
+.m-content, .mp-content{
     background: #2A2A2B;
     box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    overflow: hidden;
 }
 .m-content{
-    width: 65%;
+    width: 63%;
 }
-.mm-content{
-    width: 30%;
+.title-sur{
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 2rem 0rem 2rem 3rem;
+    gap: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+.title-sur h2{
+    color: #AC3483;
+    font-weight: 500;
+    font-size: 34px;
+}
+.title-sur spam{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+}
+.chart-sur{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+}
+.sur-mes{
+    width: 40%;
+    margin-left: 3rem;
+    
+}
+.total{
+    background: url(../Components/SVG/Ellipse\ rosa.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 50%;
+    margin: 2rem 0% 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total p{
+    font-size: 60px;
+}
+.title-total{
+    width: 40%;
+    display: flex;
+    margin-left: 59%;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 37px;
+
 }
 
+
+
+/* ------------------- Grafico cirurgia/procedimento ---------- */
+
+.mp-content{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2%;
+}
+.title-proc{
+    align-items: baseline;
+    justify-content: space-between;
+    /* padding: 2rem 0rem 2rem 3rem; */
+    gap: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+.title-proc h2{
+    color: #e74c3c  ;
+    font-weight: 500;
+    font-size: 34px;    
+}
+.title-proc spam{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+}
+.sur-proc{
+    padding-right: 10%;
+}
+/* ------------------- Grafico de Gastos ---------------------- */
 
 .end-content{
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background: #2A2A2B;
-box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
-width: 98%;
-
-
+    display: flex;
+    flex-direction: column;
+    background: #2A2A2B;
+    box-shadow: 0px 3px 60px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 96%;
+    margin-bottom: 2rem;
+    margin-left: 2%;
+    overflow: hidden;
 }
-.e-content{
-
+.info{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 2rem 5rem 2rem 4rem;
+}
+.title-ex{
+    gap: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+.title-ex h2{
+    color: #1ABC9C;
+    font-weight: 500;
+    font-size: 38px;
+}
+.title-ex spam{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+}
+.expenses{
+    position: relative; 
+    height:40vh; 
+    width:100%;
+    padding: 2rem 2rem 2rem 2rem;
+}
+.value spam{
+    color: #1ABC9C;
+}
+.value{
+    font-size: 34px;
+    
 }

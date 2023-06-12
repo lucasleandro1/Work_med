@@ -4,7 +4,7 @@
     <link rel="icon" type="image/x-icon" href="../Components/SVG/favicon-16x16.png">
     <meta charset="UTF-8">
     <title>WorkMed</title>
-    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,12 +22,11 @@
            <img src="../Components/SVG/WORKMED.svg" class="img-name">
             <img src="../Components/SVG/hospital.svg" class="img-svg">
             <span class="ex">
-            <h1>What is Lorem Ipsum?</h1>
-            <p class="p-banner">Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry.
-                Lorem Ipsum has been the industry's 
-                standard dummy text ever since the 1500s,
-                when an unknown
+            <h1>Gerencie seu Hospital</h1>
+            <p class="p-banner">
+                Descubra a eficiência do nosso site de gerenciamento hospitalar.
+                 Simplifique o controle de médicos, cirurgias, salas, gastos e convênios. Otimize
+                  seu tempo e tome decisões informadas com facilidade.
             </p>
         </span>
         </div>
@@ -43,21 +42,25 @@
             <div class="form-group">
 
                 <div class="form-input">
-                    <label class="user-input">
-                        <i class="icon-user"></i>
-                        <input type="email" placeholder="Usuário" >
-                    </label>
+                    <form action="../php/PostSuperuserLogin.php" method="POST">
+                        <div class="form-input">
+                            <label class="user-input">
+                                <i class="icon-user"></i>
+                                <input name="user" type="text" placeholder="Usuário" >
+                            </label>
 
-                    <label class="pass-input">
-                        <i class="icon-pass"></i>
-                        <input type="password" placeholder="Senha"> 
-                    </label>
+                            <label class="pass-input">
+                                <i class="icon-pass"></i>
+                                <input type="password" name="pass"  placeholder="Senha"> 
+                            </label>
+                            <a href="./create-user.php">Criar Usuário</a>
+                            <div class="btn-form">
+                                <button type="submit" class="btn-submit">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
     
-                <div class="btn-form">
-                   <a href="main.php"><button type="button" class="btn-submit">Entrar</button></a>
-                </div>
-
             </div>
 
         </div>

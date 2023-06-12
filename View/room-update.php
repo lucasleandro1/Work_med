@@ -32,8 +32,9 @@
 
     <section class="home">
         <div class="title">
+        <div class="back"><a href="./room-list.php"><img src="../Components/SVG/arrow-a.svg" alt=""></a></div>
             <div class="stick"></div>
-            <div class="text-menu">Cadastro</div>
+            <div class="text-menu">Editar</div>
         </div>
         <div class="text-h2">Salas</div>
 
@@ -59,12 +60,12 @@
                         <div class="surgery-type">
                             <label class="tx-proc">Tipo de Cirurgia</label>
                             <div class="check-proc">
-                                <?php foreach ($surgeryNames as $name) { ?>
-                                    <div class="checkbox">
-                                        <input type="checkbox" value="<?= $name ?>" name="surgery" id="<?= $name ?>">
-                                        <label for="<?= $name ?>"><?= $name ?></label>
-                                    </div>
-                                <?php } ?>
+                        <?php foreach ($surgeryNames as $name) { ?>
+                        <div class="checkbox">
+                            <input type="checkbox" value="<?= $name ?>" name="surgery" id="<?= $name ?>">
+                            <label for="<?= $name ?>"><?= $name ?></label>
+                        </div>
+                        <?php } ?>
                             </div>
                         </div>
 

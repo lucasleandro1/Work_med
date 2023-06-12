@@ -10,5 +10,5 @@ $surgery = new Surgery($name, $description);
 $surgeryDAO->create($surgery);
 
 
-header('Location: ../view/select-list.php');
+header('Location: ../view/surgery-list.php');
 ?>

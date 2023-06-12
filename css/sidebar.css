@@ -83,28 +83,28 @@ body{
     color: #AC3483;
 }
 .text2{
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     white-space: nowrap;
     opacity: 1;
     margin-left: 1rem;
-    color: #FFF;
+    color: #AC3483;
 }
 .text3{
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 600;
     white-space: nowrap;
     opacity: 1;
     margin-left: 1rem;
-    color: #fff;
-    font-weight: 400;
+    color: #AC3483;
 }
 .text4{
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 600;
     white-space: nowrap;
     opacity: 1;
     margin-left: 1rem;
-    color: #FFF;
+    color: #AC3483;
 }
 
 .sidebar.close .text{
@@ -180,7 +180,7 @@ body{
 } 
 
 .list{
-    filter: saturate(0%);
+    filter: saturate(100%);
 }
 .list:hover{
     filter: saturate(100%);

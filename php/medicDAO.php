@@ -4,6 +4,12 @@ require_once 'doctor.php';
 class MedicDAO {
 
     public function create (Doctor $doctor) {
+        $birthDate = DateTime::createFromFormat('Y-m-d', $doctor->getDate()); // Data de nascimento do paciente
+        $currentDate = new DateTime(); 
+
+
+        $minDate = (new DateTime())->sub(new DateInterval('P100Y'));
+        if ($birthDate >= $minDate && $birthDate <= $currentDate) {
         $sql = 'INSERT INTO  doctor (name, speciality, gender, crm, number, cpf, date, adress ) VALUES (?,?,?,?,?,?,?,?)';
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $doctor->getName());
@@ -17,7 +23,11 @@ class MedicDAO {
         $stmt->execute();
         $id = Conexao::getConn()->lastInsertid('doctor');
         $doctor->setId($id);
+    }else{
+        echo "Data de nascimento inválida. Certifique-se de que a data esteja entre " . $minDate->format('Y-m-d') . " e " . $currentDate->format('Y-m-d');
+
     }
+}
 
     public function read(){
         $sql = 'SELECT * FROM doctor';

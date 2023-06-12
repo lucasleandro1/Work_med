@@ -23,62 +23,94 @@
     <!-- --------------- Menu Sidebar --------------- -->
 
     <?php
-        include ('./sidebar.html')
+        include ('./sidebar-med.html')
    ?>
 
     <!-- --------------- Conteudo Principal --------------- -->
 
     <section class="home">
         <div class="title">
+        <div class="back"><a href="./select-list.php"><img src="../Components/SVG/arrow-v.svg" alt=""></a></div>
             <div class="stick"></div>
             <div class="text-menu">Listagem</div>
         </div>
         <div class="text-h2">Médico</div>
-
+        
+        <div class="btn-cad">
+                <a href="./medic-register.php"><button class="cad-btn">Cadastrar<img src="../Components/SVG/cadastro.svg" alt="Voltar"></button></a>
+        </div>
         <div class="content-form">
 
             <!-- --------------- InputFields --------------- -->
-
-            <?php foreach ($doctors as $doctor) { ?>
-                <form method="get" action="../php/PostArchives.php" class="form">
-
-                    <details class="list-form">
-                        <summary><?= $doctor->getName() ?></summary>                       
-                        <div class="list-flex">
-                            <div class="dados">
-                                <h1>Dados Pessoais</h1>
-                                <p><?= $doctor->getName() ?></p>
-                                <p><?= $doctor->getGen() ?></p>
-                                <p><?= $doctor->getCpf() ?></p>
-                                <p><?= $doctor->getDate() ?></p>
-                                <p><?= $doctor->getAdr() ?></p>
-                                
-                            </div>
-                            <div class="especs">
-                                <h1>Especificações</h1>
-                                <p><?= $doctor->getSpeciality() ?></p>
-                                <p><?= $doctor->getCrm() ?></p>
-                                <p><?= $doctor->getNum() ?></p>
-                               
-                                
-                                
-                            </div>
-                        </div>
-                    </details>
-                    </form>
-                    <div class="btn-action">
-                        <a href="./medic-update.php?id=<?= $doctor->getId() ?>"><button class="delete-btn">Editar</button></a>
-                        <a href="../php/deleteMedic.php?id=<?= $doctor->getId() ?>"><button class="delete-btn">Excluir</button></a>
-                    </div>
-                    
-                    
-                
-                
-            <?php
             
-              } 
-            ?>
-
+            <?php foreach ($doctors as $doctor) { ?>
+                <div class="form-flex">
+                    <form method="get" action="../php/PostArchives.php" class="form">
+                        <details class="list-form">
+                            <summary><img src="../Components/SVG/Rectangle verde.svg" class="img-ret" alt=""><img src="../Components/SVG/user verde.svg" class="img-user" alt="">Dr. <?= $doctor->getName() ?></summary>                       
+                            <div class="list-flex">
+                                <div class="dados">
+                                    <h1>Dados Pessoais</h1>
+                                    <div class="info-container">
+                                        <div>   
+                                            <div class="info-flex">
+                                                <span>Nome</span>
+                                                <p><?= $doctor->getName()?></p>
+                                            </div>
+                                            <div class="info-flex">
+                                                <span>Celular</span>
+                                                <p><?= $doctor->getNum() ?></p>
+                                            </div>
+                                            <div class="info-flex">
+                                                <span>Gênero</span>
+                                                <p><?= $doctor->getGen() ?></p>
+                                            </div>
+                                        </div> 
+                                        <div>
+                                            <div class="info-flex">
+                                                <span>CPF</span>
+                                                <p><?= $doctor->getCpf() ?></p>
+                                            </div>
+                                            <div class="info-flex">
+                                                <span>Data Nascimento</span>
+                                                <p><?= $doctor->getDate() ?></p>
+                                            </div>
+                                            <div class="info-flex">
+                                                <span>Endereço</span>
+                                                <p><?= $doctor->getAdr() ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="especs">
+                                    <h1>Especificações</h1>
+                                        <div class="info-container">
+                                            <div class="flex-third"> 
+                                                <div class="info-flex">
+                                                    <span>Especialidade</span>
+                                                    <p><?= $doctor->getSpeciality() ?></p>
+                                                </div>
+                                                <div class="info-flex">
+                                                    <span>CRM</span>
+                                                    <p><?= $doctor->getCrm() ?></p>
+                                                </div>
+                                            </div>
+                                        </div>                                
+                                </div>
+                            </div>
+                        </details>
+                        </form>
+                        <div class="btn-action">
+                            <details class="det-btn">
+                                <summary><img src="../Components/SVG/3dot.svg" alt=""></summary>
+                                <summary class="flex-img">
+                                    <a href="./medic-update.php?id=<?= $doctor->getId() ?>"><img src="../Components/SVG/update verde.svg" alt=""     class="btn-u" ></a>
+                                    <a  href="../php/deleteMedic.php?id=<?= $doctor->getId() ?>"><img src="../Components/SVG/delete verde.svg" alt=""class="btn-d"></a>
+                                </summary>
+                            </details>
+                        </div>
+                </div>
+            <?php } ?>
         </div>
     </section>
 

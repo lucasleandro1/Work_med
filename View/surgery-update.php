@@ -31,8 +31,9 @@
 
     <section class="home">
         <div class="title">
+            <div class="back"><a href="./surgery-list.php"><img src="../Components/SVG/arrow-r.svg" alt=""></a></div>
             <div class="stick"></div>
-            <div class="text-menu">Cadastro</div>
+            <div class="text-menu">Editar</div>
         </div>
         <div class="text-h2">Cirurgia</div>
 
